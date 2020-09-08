@@ -74,7 +74,7 @@ resembles:
   object, and make the data format recognizable to clients.
 * Use the [gogo-protobuf](https://github.com/gogo/protobuf) Golang library to generate marshal/unmarshal
   operations, allowing us to bypass the expensive reflection used by the
-  golang JSOn operation
+  golang JSON operation
 
 
 ## Alternatives
@@ -128,7 +128,7 @@ to represent JSON maps:
     map    -> map<string, ...> -> repeated Message { key string; value bytes }
 
 We will not convert known string constants to enumerations, since that
-would require extra logic we do not already have in JSOn.
+would require extra logic we do not already have in JSON.
 
 To begin with, we will use Protobuf 3 to generate a Protobuf 2 schema, and
 in the future investigate a Protobuf 3 serialization. We will introduce
